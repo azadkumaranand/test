@@ -12,8 +12,8 @@
 <body>
     <img class="right-asset-image" src="https://templatemo.com/templates/templatemo_573_eduwell/assets/images/banner-right-dec.png"
                     alt="">
-        <img class="left-asset-image" src="https://templatemo.com/templates/templatemo_573_eduwell/assets/images/banner-left-dec.png"
-        alt="">
+    <img class="left-asset-image" src="https://templatemo.com/templates/templatemo_573_eduwell/assets/images/banner-left-dec.png"
+    alt="">
     <div class="navbar-container">
         <div class="navbar-box">
             <div class="logo">
@@ -70,10 +70,10 @@
     <div class="learning-section">
         <div class="learn-box">
             <div class="learn-tab">
-                <p>Web Development</p>
-                <p>Graphic Design</p>
-                <p>Web Design</p>
-                <p>WordPress</p>
+                <p class="tab1">Web Development</p>
+                <p class="tab2">Graphic Design</p>
+                <p class="tab3">Web Design</p>
+                <p class="tab4">WordPress</p>
             </div>
             <div class="learn-about">
                 <div>
@@ -81,8 +81,8 @@
                         alt="">
                     <p>&dollar;128</p>
                 </div>
-                <div>
-                    <p>WordPress Introduction</p>
+                <div class="tab-box-content">
+                    <p>Web Development</p>
                     <p>Did you know that you can visit <a href="">TooCSS website </a>for latest listing of HTML
                         templates and a variety of useful templates.<br><br>
                         You just need to go and visit that website right now. IF you have any suggestion or comment
@@ -186,7 +186,83 @@
             
         </div>
     </div>
-    
+    <script>
+        let tab1 = document.querySelector('.tab1');
+        let tab2 = document.querySelector('.tab2');
+        let tab3 = document.querySelector('.tab3');
+        let tab4 = document.querySelector('.tab4');
+        let tab_box_content = document.querySelector('.tab-box-content');
+        const menubar = document.querySelector('.menubar');
+        const nav_links = document.querySelector('.nav_links');
+    //    let a = 9;
+    //    a = 40;
+        tab1.addEventListener('click', myFunc);
+        tab2.addEventListener('click', myFunc1);
+        tab3.addEventListener('click', myFunc2);
+        tab4.addEventListener('click', myFunc3);
+        function myFunc(){
+            tab_box_content.innerHTML = `<p>Web Development</p>
+                    <p>Did you know that you can visit <a href="">TooCSS website </a>for latest listing of HTML
+                        templates and a variety of useful templates.<br><br>
+                        You just need to go and visit that website right now. IF you have any suggestion or comment
+                        about this template, you can feel free to go to contact page for our email address.</p>
+                    <div>
+                        <span>48 Hours</span>
+                        <span>4 Weeks</span>
+                        <span>2 Certificates</span>
+                    </div>
+                    <a href="#">Subscribe Course</a>`
+        }
+        function myFunc1(){
+            tab_box_content.innerHTML = `<p>Graphic Design</p>
+                    <p>Did you know that you can visit <a href="">TooCSS website </a>for latest listing of HTML
+                        templates and a variety of useful templates.<br><br>
+                        You just need to go and visit that website right now. IF you have any suggestion or comment
+                        about this template, you can feel free to go to contact page for our email address.</p>
+                    <div>
+                        <span>48 Hours</span>
+                        <span>4 Weeks</span>
+                        <span>2 Certificates</span>
+                    </div>
+                    <a href="#">Subscribe Course</a>`
+        }
+        function myFunc2(){
+            tab_box_content.innerHTML = `<p>Web Design</p>
+                    <p>Did you know that you can visit <a href="">TooCSS website </a>for latest listing of HTML
+                        templates and a variety of useful templates.<br><br>
+                        You just need to go and visit that website right now. IF you have any suggestion or comment
+                        about this template, you can feel free to go to contact page for our email address.</p>
+                    <div>
+                        <span>48 Hours</span>
+                        <span>4 Weeks</span>
+                        <span>2 Certificates</span>
+                    </div>
+                    <a href="#">Subscribe Course</a>`
+        }
+        function myFunc3(){
+            tab_box_content.innerHTML = `<p>WordPress</p>
+                    <p>Did you know that you can visit <a href="">TooCSS website </a>for latest listing of HTML
+                        templates and a variety of useful templates.<br><br>
+                        You just need to go and visit that website right now. IF you have any suggestion or comment
+                        about this template, you can feel free to go to contact page for our email address.</p>
+                    <div>
+                        <span>48 Hours</span>
+                        <span>4 Weeks</span>
+                        <span>2 Certificates</span>
+                    </div>
+                    <a href="#">Subscribe Course</a>`;
+        }
+        menubar.addEventListener('click', function(){
+            
+            if(nav_links.style.display === 'block'){
+                nav_links.style.display = 'none';
+                menubar.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }else{
+                nav_links.style.display = 'block';
+                menubar.innerHTML = '<i class="fa-solid fa-close"></i>';
+            }
+        });
+    </script>
 </body>
 
 </html>
