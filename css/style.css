@@ -614,7 +614,18 @@ input:focus{
 
 @media(max-width: 790px){
     .nav_links{
-        display: none;
+        /* display: none; */
+        position: absolute;
+        background-color: red;
+        top: 110px;
+        left: 0;
+        width: 100%;
+    }
+    .nav_links ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9999;
     }
     .menubar{
         display: block;
