@@ -614,7 +614,7 @@ input:focus{
 
 @media(max-width: 790px){
     .nav_links{
-        /* display: none; */
+        display: none;
         position: absolute;
         background-color: red;
         top: 110px;
